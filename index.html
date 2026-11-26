@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colecionismo: os modernistas no design brasileiro</title>
+<meta name="description" content="Exposição online de uma coleção particular de mobiliário, tapetes e objetos ligados ao modernismo no design brasileiro. Pesquisa, textos e fotografias de Verônica De Farias.">
+<meta property="og:title" content="Colecionismo: os modernistas no design brasileiro">
+<meta property="og:description" content="Exposição online de uma coleção particular de mobiliário, tapetes e objetos.">
+<meta property="og:image" content="img/001-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--b:#6B1E2E;--ink:#111;--mut:#6b6b6b;--line:#e6e6e6;--pad:clamp(20px,5vw,72px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit}
+.up{text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:500}
+.wrap{padding:0 var(--pad)}
+section{scroll-margin-top:64px}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;height:64px;padding:0 var(--pad);transition:background .3s,color .3s;color:#fff}
+header.solid{background:#fff;color:var(--ink);border-bottom:1px solid var(--line)}
+.logo{font-weight:700;letter-spacing:.14em;font-size:13px;text-decoration:none}
+nav a{margin-left:28px;text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent}
+nav a.on{border-color:var(--b)} header:not(.solid) nav a.on{border-color:#fff}
+.burger{display:none}
+@media(max-width:820px){nav{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;color:var(--ink);padding:12px var(--pad) 24px;border-bottom:1px solid var(--line)}nav.open{display:block}nav a{display:block;margin:14px 0}.burger{display:block}}
+/* hero */
+.hero{height:100svh;min-height:520px;position:relative;overflow:hidden;color:#fff;background:#000}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease,transform 8s linear;transform:scale(1.06)}
+.hero img.on{opacity:.72;transform:scale(1)}
+.hero .txt{position:absolute;left:var(--pad);right:var(--pad);bottom:12vh}
+.hero h1{font-weight:700;font-size:clamp(34px,6.4vw,92px);line-height:1.02;letter-spacing:-.02em;max-width:14ch;text-transform:uppercase}
+.hero h1 span{display:block;font-weight:300;text-transform:none;letter-spacing:-.01em;font-size:.62em;margin-top:.2em}
+.hero p{margin-top:22px;max-width:46ch;font-size:16px}
+.cue{position:absolute;right:var(--pad);bottom:12vh;writing-mode:vertical-rl;text-decoration:none}
+.cue:after{content:"";display:inline-block;width:1px;height:48px;background:#fff;margin-top:12px;animation:cue 2s infinite}
+@media(max-width:700px){.cue{display:none}}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* bordô band */
+.band{background:var(--b);color:#fff;padding:clamp(72px,12vw,150px) var(--pad)}
+.band .lead{font-size:clamp(20px,2.3vw,30px);line-height:1.45;font-weight:300;max-width:34em}
+.band .lead p+p{margin-top:1em}
+.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s ease}
+.more>div{overflow:hidden}
+.more.open{grid-template-rows:1fr}
+.more p{max-width:42em;margin-top:1.2em;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.art .bd p,.band .lead p,.vw .ds,.persp blockquote{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.band .more p:first-child{margin-top:2em}
+.btn{margin-top:36px;display:inline-flex;gap:10px;align-items:center;border-bottom:1px solid currentColor;padding-bottom:4px}
+.btn .pl{display:inline-block;transition:transform .3s}
+.btn[aria-expanded=true] .pl{transform:rotate(45deg)}
+/* headings */
+.sh{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding:clamp(72px,10vw,130px) var(--pad) 36px}
+.sh h2{font-size:clamp(30px,4vw,54px);font-weight:700;letter-spacing:-.02em;line-height:1;text-transform:uppercase}
+.sh p{color:var(--mut);max-width:38ch;font-size:15px}
+/* timeline */
+.tl{position:relative;overflow-x:auto;cursor:grab;scrollbar-width:none;padding:0 var(--pad) 40px}
+.tl::-webkit-scrollbar{display:none}
+.tl.drag{cursor:grabbing}
+.track{display:flex;gap:0;width:max-content;position:relative;padding-top:44px}
+.track:before{content:"";position:absolute;left:0;right:0;top:63px;height:2px;background:var(--b)}
+.ev{width:260px;padding-right:36px;position:relative;user-select:none}
+.ev .dot{width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--b);position:relative;z-index:1;margin-bottom:18px;margin-top:13px}
+.ev.p .dot{background:var(--b)}
+.ev .yr{font-weight:700;font-size:22px;letter-spacing:-.01em}
+.ev .d{font-size:14px;color:var(--mut);margin-top:6px;line-height:1.45}
+.ev .th{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.ev .th button{width:76px;height:76px;overflow:hidden;background:#f3f3f3}
+.ev .th img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.ev .th button:hover img{transform:scale(1.08)}
+.tlnav{display:flex;gap:8px;padding:0 var(--pad)}
+.tlnav button{width:42px;height:42px;border:1px solid var(--line);border-radius:50%}
+.tlnav button:hover{border-color:var(--b);color:var(--b)}
+/* filters + grid */
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips button{padding:8px 16px;border:1px solid var(--line);border-radius:40px;font-size:14px}
+.chips button.on{background:var(--b);border-color:var(--b);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:clamp(16px,2.4vw,32px);padding:0 var(--pad)}
+.card{text-align:left;opacity:1;transition:opacity .4s}
+.card.hide{display:none}
+.card .im{aspect-ratio:4/5;overflow:hidden;background:#f3f3f3;position:relative}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card img{filter:grayscale(1);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s}
+.card:hover img,.card:focus-visible img{transform:scale(1.05);filter:none}
+@media(hover:none){.card img{filter:none}}
+.card .ov{position:absolute;inset:auto 0 0 0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-size:14px;opacity:0;transform:translateY(8px);transition:.35s}
+.card:hover .ov,.card:focus-visible .ov{opacity:1;transform:none}
+.card .lb{padding-top:14px}
+.card .a{font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:14px}
+.card .o{font-size:14px;color:var(--mut)}
+@media(hover:none){.card .ov{display:none}}
+/* viewer */
+.vw{position:fixed;inset:0;z-index:100;background:#fff;display:none;grid-template-columns:1.5fr 1fr;border-top:4px solid var(--b)}
+.vw.open{display:grid}
+.vw .stage{position:relative;background:#f4f4f2;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:0}
+.vw .stage img{max-width:92%;max-height:86%;object-fit:contain;transition:opacity .35s}
+.vw .cap{position:absolute;left:20px;bottom:16px;font-size:13px;color:var(--mut)}
+.vw .ar{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.12);font-size:18px}
+.vw .ar.l{left:16px}.vw .ar.r{right:16px}
+.vw .dots{position:absolute;bottom:18px;right:20px;display:flex;gap:6px}
+.vw .dots i{width:7px;height:7px;border-radius:50%;background:#c9c9c9}.vw .dots i.on{background:var(--b)}
+.vw .info{padding:clamp(28px,4vw,56px);overflow:auto;display:flex;flex-direction:column}
+.vw .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px}
+.vw .x{font-size:28px;line-height:1}
+.vw h3{font-size:clamp(26px,2.6vw,38px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.05}
+.vw .meta{margin-top:14px;font-size:16px}.vw .meta div{color:var(--mut)}
+.vw .meta .t{color:var(--ink);font-style:italic}
+.tog{display:inline-flex;border:1px solid var(--line);border-radius:40px;margin-top:28px;padding:3px;align-self:flex-start}
+.tog button{padding:7px 14px;border-radius:40px;font-size:13px}
+.tog button.on{background:var(--b);color:#fff}
+.vw .ds{margin-top:28px;font-size:16px;max-width:38em}
+.vw .pn{margin-top:auto;padding-top:40px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.vw .pn button:hover{color:var(--b)}
+@media(max-width:860px){.vw{grid-template-columns:1fr;grid-template-rows:52vh 1fr}.vw .top{margin-bottom:24px}}
+/* artists */
+.arts{padding:0 var(--pad);border-top:1px solid var(--line)}
+.art{border-bottom:1px solid var(--line)}
+.art>button{width:100%;display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;padding:18px 0;text-align:left}
+.art .tn{width:64px;height:64px;overflow:hidden;background:#f3f3f3}.art .tn img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:filter .4s}
+.art>button:hover .tn img,.art.open .tn img{filter:none}
+.art .nm{font-size:clamp(20px,2.4vw,32px);font-weight:700;letter-spacing:-.01em;text-transform:uppercase;transition:color .3s}
+.art>button:hover .nm,.art.open .nm{color:var(--b)}
+.art .ct{color:var(--mut);font-size:14px;margin-left:12px;font-weight:400;text-transform:none}
+.art .pl{font-size:26px;transition:transform .3s;font-weight:300}.art.open .pl{transform:rotate(45deg)}
+.art .bd{padding:0 0 28px 84px;display:grid;grid-template-columns:minmax(0,40em) auto;gap:32px;align-items:start}
+.art .bd .lk{display:flex;gap:10px;flex-wrap:wrap}
+.art .bd .lk button{width:96px}.art .bd .lk img{width:96px;height:96px;object-fit:cover}
+.art .bd .lk span{display:block;font-size:12px;color:var(--mut);margin-top:4px}
+@media(max-width:760px){.art .bd{padding-left:0;grid-template-columns:1fr}}
+/* texts tabs */
+.tabs{display:flex;gap:28px;padding:0 var(--pad);border-bottom:1px solid var(--line);overflow-x:auto}
+.tabs button{padding:14px 0;border-bottom:2px solid transparent;white-space:nowrap;font-size:15px;color:var(--mut)}
+.tabs button.on{border-color:var(--b);color:var(--ink);font-weight:500}
+.pane{display:none;padding:clamp(40px,6vw,80px) var(--pad) 0}.pane.on{display:block;animation:fade .5s}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.q{font-size:clamp(24px,3vw,40px);line-height:1.25;font-weight:300;color:var(--b);max-width:24em;letter-spacing:-.01em}
+.pane .more p,.persp .more p{color:#222}
+.pane .btn{color:var(--ink)}
+/* perspectivas */
+.persp{padding:clamp(80px,12vw,160px) var(--pad);text-align:left;margin-top:clamp(60px,8vw,110px);border-top:1px solid var(--line)}
+.persp blockquote{font-size:clamp(22px,2.8vw,36px);line-height:1.35;font-weight:300;max-width:30em}
+.persp blockquote:before{content:"“";display:block;color:var(--b);font-size:2.4em;line-height:.6;font-weight:700}
+/* footer */
+footer{background:var(--b);color:#E8D3D7;padding:64px var(--pad) 40px;font-size:14px}
+footer .fg{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+footer h4{color:#fff;margin-bottom:12px}
+footer details summary{cursor:pointer;color:#fff;list-style:none}footer details summary:before{content:"+ ";color:#fff;font-weight:700}
+footer details[open] summary:before{content:"– "}
+footer ol{margin-top:12px;padding-left:0;list-style:none}footer li{margin-top:8px}
+footer .note{margin-top:48px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);color:#E8D3D7;font-size:13px}
+footer a{color:#fff}
+@media(max-width:760px){footer .fg{grid-template-columns:1fr}}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+.heroA{background:var(--b)}
+.heroA .txt>*{opacity:0;transform:translateY(24px);animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+.heroA h1{animation-delay:.15s!important;font-size:clamp(40px,8vw,128px);max-width:none}
+.heroA p{animation-delay:.4s!important}
+@keyframes rise{to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header id="hd">
+  <a class="logo" href="#top">COLECIONISMO</a>
+  <button class="burger up" id="burger" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" class="up">
+    <a href="#exposicao">Exposição</a><a href="#linha">Linha do tempo</a><a href="#obras">Obras</a><a href="#artistas">Artistas</a><a href="#colecao">Sobre a coleção</a>
+  </nav>
+</header>
+
+<section class="hero heroA" id="top">
+  <div class="txt"><div class="up" style="margin-bottom:18px">Exposição online</div>
+    <h1>Colecionismo:<span>os modernistas no design brasileiro</span></h1>
+    <p>Mobiliário, tapetes e objetos de uma coleção particular. Pesquisa, textos e fotografias de Verônica De Farias.</p></div>
+  <a class="cue up" href="#exposicao">Entrar</a>
+</section>
+
+<section class="band" id="exposicao">
+  <div class="up rv" style="margin-bottom:28px;opacity:.8">Exposição</div>
+  <div class="lead rv" id="introShort"></div>
+  <div class="more" id="introMore"><div></div></div>
+  <button class="btn up" data-more="introMore" aria-expanded="false">Ler mais <span class="pl">+</span></button>
+</section>
+
+<section id="linha">
+  <div class="sh rv"><h2>Linha do tempo</h2><p>De 1919 a 1989: do ensino da Bauhaus aos tapetes desenhados por artistas. Arraste para percorrer e toque numa obra para abri-la.</p></div>
+  <div class="tl" id="tl"><div class="track" id="track"></div></div>
+  <div class="tlnav"><button id="tlL" aria-label="Anterior">←</button><button id="tlR" aria-label="Próximo">→</button></div>
+</section>
+
+<section id="obras">
+  <div class="sh rv"><h2>Obras</h2>
+    <div class="chips" id="chips">
+      <button class="on" data-f="all">Todas (13)</button><button data-f="mobiliario">Mobiliário e objetos (9)</button><button data-f="tapetes">Tapetes (4)</button>
+    </div>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="artistas">
+  <div class="sh rv"><h2>Artistas</h2><p>Dez artistas, arquitetos e designers, brasileiros e estrangeiros que atuaram no país.</p></div>
+  <div class="arts" id="arts"></div>
+</section>
+
+<section id="colecao">
+  <div class="sh rv"><h2>Sobre a coleção</h2></div>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="panes"></div>
+  <div class="persp rv">
+    <div class="up" style="color:var(--b);margin-bottom:28px">Perspectivas</div>
+    <blockquote id="perspQ"></blockquote>
+    <div class="more" id="perspMore"><div></div></div>
+    <button class="btn up" data-more="perspMore" aria-expanded="false">Ler mais <span class="pl">+</span></button>
+  </div>
+</section>
+
+<footer>
+  <div class="fg">
+    <div>
+      <h4 class="up">Colecionismo: os modernistas no design brasileiro</h4>
+      <p>Pesquisa, textos e fotografias: Verônica De Farias.<br>Imagens das obras originais: Nucleon 8, <i>Coleção os modernos brasileiros</i> (1986).</p>
+    </div>
+    <div>
+      <details><summary class="up">Referências</summary><ol id="refs"></ol></details>
+    </div>
+  </div>
+  <p class="note">Site desenvolvido como parte do Trabalho de Conclusão de Curso de Maria Verônica Rodrigues De Farias, Bacharelado em Museologia, Claretiano – Centro Universitário. © 2026</p>
+</footer>
+
+<div class="vw" id="vw" role="dialog" aria-modal="true" aria-label="Obra">
+  <div class="stage" id="stage">
+    <img id="vImg" alt="">
+    <button class="ar l" id="vPrev" aria-label="Foto anterior">←</button>
+    <button class="ar r" id="vNext" aria-label="Próxima foto">→</button>
+    <div class="cap" id="vCap"></div><div class="dots" id="vDots"></div>
+  </div>
+  <div class="info">
+    <div class="top"><span class="up" id="vNum"></span><button class="x" id="vX" aria-label="Fechar">×</button></div>
+    <h3 id="vA"></h3>
+    <div class="meta" id="vMeta"></div>
+    <div class="tog" id="vTog"><button class="on" data-v="col">Na coleção</button><button data-v="orig">Obra original</button></div>
+    <p class="ds" id="vDs"></p>
+    <div class="pn"><button id="pPrev">← Obra anterior</button><button id="pNext">Próxima obra →</button></div>
+  </div>
+</div>
+
+<script>
+const D={"pieces": [{"n": "001", "artist": "Lasar Segall", "obj": "Sofá (conversadeira)", "title": "MOD. 200", "year": "1932", "ed": "reedição Nucleon 8, década de 1980", "mat": "Madeira, molas, espuma e couro", "dim": "62 × 72 cm (cada módulo)", "desc": "Sofá componível composto por dois módulos de canto com braços. Estrutura em madeira maciça ebanizada em preto. Assento e encosto em molas e espuma, revestidos em couro branco.", "cat": "mobiliario", "imgs": [{"f": "001-1.jpg", "c": "Obra no acervo", "w": 1400, "h": 788}], "orig": {"f": "001-orig.jpg", "c": "Obra original (1932)"}}, {"n": "002", "artist": "John Graz", "obj": "Sofá", "title": "MOD. 300", "year": "década de 1950", "ed": "reedição Nucleon 8, década de 1980", "mat": "Madeira, espuma e tecido", "dim": "52 × 207 × 87 cm", "desc": "Sofá com estrutura em madeira maciça ebanizada em preto. Assento e encosto fixos em espuma, revestidos em tecido aveludado azul. O assento tem extremidades arredondadas, e o encosto é sustentado por dois montantes de madeira.", "cat": "mobiliario", "imgs": [{"f": "002-1.jpg", "c": "Obra no acervo", "w": 1400, "h": 1050}], "orig": {"f": "002-orig.jpg", "c": "Obra original (década de 1950)"}}, {"n": "003", "artist": "John Graz", "obj": "Escultura/Luminária", "title": "MOD. 304", "year": "década de 1950", "ed": "reedição Nucleon 8, década de 1980", "mat": "Poliéster, acrílico-cristal, latão e madeira", "dim": "87 × 15 cm", "desc": "A obra é composta por diversos materiais: poliéster e acrílico-cristal. Estrutura metálica em latão, com sistema elétrico embutido e microlâmpada. Base em madeira ebanizada em preto.", "cat": "mobiliario", "imgs": [{"f": "003-1.jpg", "c": "Obra no acervo", "w": 753, "h": 1400}], "orig": {"f": "003-orig.jpg", "c": "Obra no catálogo (original)"}}, {"n": "004", "artist": "Lina Bo Bardi", "obj": "Poltrona", "title": "MOD. 400", "year": "1947", "ed": "reedição Nucleon 8, década de 1980", "mat": "Metal, couro e latão", "dim": "83 × 78 × 78 cm", "desc": "Poltrona com estrutura tubular em metal pintado em preto fosco. Assento e encosto formados por capa em couro sola natural, fixada na estrutura. Braços terminados em esferas de latão.", "cat": "mobiliario", "imgs": [{"f": "004-1.jpg", "c": "Obra no acervo", "w": 1200, "h": 1600}], "orig": {"f": "004-orig.jpg", "c": "Obra no catálogo"}}, {"n": "005", "artist": "Flávio de Carvalho", "obj": "Cadeira", "title": "MOD. 501", "year": "década de 1950", "ed": "reedição Nucleon 8, década de 1980", "mat": "Metal cromado e couro", "dim": "75 × 50 × 55 cm", "desc": "Cadeira com braços, em estrutura tubular de metal cromado. Assento e encosto em couro sola tingido de preto, fixados na estrutura. Os braços curvos descem e formam as pernas dianteiras.", "cat": "mobiliario", "imgs": [{"f": "005-1.jpg", "c": "Obra no acervo", "w": 1166, "h": 1506}], "orig": {"f": "005-orig.jpg", "c": "Obra no catálogo"}}, {"n": "006", "artist": "Paulo Mendes da Rocha", "obj": "Cadeira (Paulistano)", "title": "MOD. 700", "year": "1957", "ed": "reedição Nucleon 8, década de 1980", "mat": "Aço e couro", "dim": "75 × 75 × 68 cm", "desc": "Cadeira em balanço, com estrutura contínua em barra de aço mola pintada em preto fosco. Capa única de couro veste a estrutura e forma assento, encosto e braços.", "cat": "mobiliario", "imgs": [{"f": "006-1.jpg", "c": "Obra no acervo", "w": 1200, "h": 1600}], "orig": {"f": "006-orig.jpg", "c": "Obra no catálogo"}}, {"n": "007", "artist": "Paulo Mendes da Rocha", "obj": "Espreguiçadeira", "title": "MOD. 702", "year": "1985", "ed": "reedição Nucleon 8, década de 1980", "mat": "Aço pintado e espuma revestida", "dim": "80 × 53 × 155 cm", "desc": "Espreguiçadeira em duas partes: lâmina contínua em aço mola pintada em epóxi azul, dividida por um rasgo central, apoiada sobre base em aço pintado em preto fosco. Apoio de cabeça cilíndrico em espuma revestida em preto.", "cat": "mobiliario", "imgs": [{"f": "007-1.jpg", "c": "Obra no acervo", "w": 1200, "h": 1600}], "orig": {"f": "007-orig.jpg", "c": "Obra no catálogo"}}, {"n": "008", "artist": "Gregori Warchavchik", "obj": "Cadeira", "title": "MOD. 800", "year": "1928", "ed": "reedição Nucleon 8, década de 1980", "mat": "Madeira laqueada", "dim": "86,5 × 43 × 48 cm", "desc": "Cadeira em madeira laqueada, de linhas retas. Assento retangular espesso sobre cinta e pernas de seção quadrada, com travessa baixa entre as pernas dianteiras. O encosto, uma placa retangular, apoia-se em um quadro formado pelo prolongamento das pernas traseiras.", "cat": "mobiliario", "imgs": [{"f": "008-1.jpg", "c": "Obra no acervo", "w": 1200, "h": 1600}, {"f": "008-2.jpg", "c": "Detalhe do encosto", "w": 950, "h": 630}], "orig": null}, {"n": "009", "artist": "Gregori Warchavchik", "obj": "Porta-partituras (conjunto de 2)", "title": "MOD. 801", "year": "1928", "ed": "reedição Nucleon 8, década de 1980", "mat": "Madeira ebonizada", "dim": "160 × 32 × 32 cm e 110 × 32 × 32 cm", "desc": "Conjunto de duas peças verticais de seção quadrada, em madeira ebonizada, de linhas retas e simplificadas, com laterais e prateleiras fixas ao longo de toda a altura, apoiadas diretamente sobre o piso. A peça maior tem o topo inclinado. Usadas como estante de livros.", "cat": "mobiliario", "imgs": [{"f": "009-1.jpg", "c": "Obra no acervo", "w": 1047, "h": 1600}, {"f": "009-2.jpg", "c": "Obra no acervo (outra vista)", "w": 1200, "h": 1600}], "orig": null}, {"n": "010", "artist": "Carlos Fajardo", "obj": "Tapete", "title": "Sem título", "year": "1989", "ed": "Companhia dos Tapetes Ocidentais, tiragem limitada", "mat": "Lã", "dim": "170 × 170 cm", "desc": "Tapete quadrado em lã, de pelo alto, com campo central verde-escuro e faixa de borda em verde-claro acinzentado. No centro, uma abertura quadrada vazada atravessa o tapete e deixa o piso à mostra.", "cat": "tapetes", "imgs": [{"f": "010-1.jpg", "c": "Obra no acervo", "w": 1529, "h": 1447}, {"f": "010-2.jpg", "c": "Abertura central", "w": 560, "h": 450}], "orig": null}, {"n": "011", "artist": "Ester Grinspum", "obj": "Tapete", "title": "Sem título", "year": "1989", "ed": "Companhia dos Tapetes Ocidentais, tiragem limitada", "mat": "Lã", "dim": "170 × 230 cm", "desc": "Tapete retangular em lã, de pelo alto, com fundo azul-claro acinzentado. Linhas pretas irregulares formam um quadrilátero em perspectiva, ladeado por uma faixa curva bege à esquerda e por uma faixa preta vertical à direita.", "cat": "tapetes", "imgs": [{"f": "011-1.jpg", "c": "Obra no acervo", "w": 1200, "h": 1600}, {"f": "011-2.jpg", "c": "Campo central", "w": 1000, "h": 850}], "orig": null}, {"n": "012", "artist": "Tomie Ohtake", "obj": "Tapete", "title": "Sem título", "year": "1989", "ed": "Companhia dos Tapetes Ocidentais, tiragem limitada", "mat": "Lã", "dim": "200 × 200 cm", "desc": "Tapete quadrado em lã, de pelo alto. Um grande segmento circular em mescla de preto e branco ocupa a maior parte da superfície, delimitado por uma linha curva em coral sobre fundo preto. Assinatura “TOMIE” tecida no canto inferior direito.", "cat": "tapetes", "imgs": [{"f": "012-1.jpg", "c": "Obra no acervo", "w": 1508, "h": 1600}, {"f": "012-2.jpg", "c": "Assinatura", "w": 348, "h": 441}, {"f": "012-3.jpg", "c": "Obra no acervo (outra vista)", "w": 1600, "h": 1314}], "orig": null}, {"n": "013", "artist": "Wesley Duke Lee", "obj": "Tapete", "title": "Sem título", "year": "1989", "ed": "Companhia dos Tapetes Ocidentais, tiragem limitada", "mat": "Lã", "dim": "200 × 170 cm", "desc": "Tapete retangular em lã, de pelo alto, com fundo em blocos de azul e cinza. Sobre ele, formas orgânicas em amarelo-claro e rosa, contornadas em preto.", "cat": "tapetes", "imgs": [{"f": "013-1.jpg", "c": "Obra no acervo (vista parcial)", "w": 1600, "h": 1200}, {"f": "013-2.jpg", "c": "Formas centrais", "w": 1300, "h": 950}], "orig": null}], "artists": [{"name": "Lasar Segall", "bio": "O artista Lasar Segall, nascido em Vilna, na Lituânia, em 1891, formou-se em Berlim e Dresden, onde se aproximou do Expressionismo. Após uma primeira visita ao Brasil em 1912, fixou-se definitivamente em São Paulo em 1923, integrando-se ao grupo modernista. Além da pintura, da gravura e da escultura, dedicou-se ao desenho de móveis: em 1932, projetou para sua residência na Vila Mariana, hoje Museu Lasar Segall, uma série de móveis sóbrios e funcionais, em clara filiação à Bauhaus.", "pieces": ["001"]}, {"name": "John Graz", "bio": "O artista John Graz, nascido na Suíça em 1891, estabeleceu-se no Brasil em 1920, integrando-se ao contexto de renovação artística que culminaria na Semana de Arte Moderna de 1922. Participou desse marco do modernismo brasileiro com obras de caráter pós-impressionista. Dotado de uma formação artística eclética, Graz não se limitou à pintura: dedicou-se também ao design de interiores e à criação de móveis e objetos utilitários.", "pieces": ["002", "003"]}, {"name": "Lina Bo Bardi", "bio": "A arquiteta Lina Bo Bardi, nascida em Roma, na Itália, em 1914, formou-se em arquitetura em sua cidade natal e mudou-se para o Brasil em 1946, acompanhada do marido, o crítico de arte Pietro Maria Bardi. Em São Paulo, fundou em 1948, ao lado do arquiteto Giancarlo Palanti, o Studio de Arte Palma, dedicado ao mobiliário moderno, e dirigiu a revista de arte e arquitetura Habitat. Como arquiteta, projetou a sede do Museu de Arte de São Paulo (MASP), na Avenida Paulista, e o SESC Pompeia. Morreu em São Paulo, em 1992.", "pieces": ["004"]}, {"name": "Flávio de Carvalho", "bio": "O artista Flávio de Carvalho nasceu em 1899 em Amparo da Barra Mansa, no estado do Rio de Janeiro. Formou-se em engenharia civil na Universidade de Durham, em Newcastle, na Inglaterra, onde também cursou belas-artes, e voltou ao Brasil em 1922. Arquiteto, pintor, desenhista, cenógrafo e escritor, combateu o ecletismo e fez da originalidade e da provocação a base de sua obra. Em 1938, concluiu a sede da Fazenda Capuava, em Valinhos (SP), para a qual desenhou grande parte do mobiliário, e um conjunto de casas na Alameda Lorena, em São Paulo. Morreu em Valinhos, em 1973.", "pieces": ["005"]}, {"name": "Paulo Mendes da Rocha", "bio": "O arquiteto Paulo Mendes da Rocha nasceu em Vitória (ES), em 1928, e formou-se pela Universidade Presbiteriana Mackenzie, em São Paulo, em 1954. Em 1957, venceu o concurso para o ginásio do Club Athletico Paulistano, para cujos salões desenhou esta cadeira. Foi professor da FAU-USP a convite de Vilanova Artigas. Entre suas obras estão o Museu Brasileiro da Escultura (MuBE) e a reforma da Pinacoteca do Estado, em São Paulo. Recebeu o Prêmio Pritzker em 2006 e morreu em São Paulo, em 2021.", "pieces": ["006", "007"]}, {"name": "Gregori Warchavchik", "bio": "O arquiteto Gregori Warchavchik nasceu em 1896 em Odessa, então parte do Império Russo, atual Ucrânia. Estudou arquitetura no Regio Istituto Superiore di Belle Arti, em Roma. Chegou ao Brasil em 1923. Em 1925, publicou “Acerca da arquitetura moderna”, considerado o primeiro manifesto da arquitetura moderna no país. Entre 1927 e 1928, construiu a Casa Modernista da Rua Santa Cruz, em São Paulo, para a qual também desenhou móveis. Morreu em São Paulo, em 1972.", "pieces": ["008", "009"]}, {"name": "Carlos Fajardo", "bio": "O artista Carlos Fajardo nasceu em São Paulo, em 1941. Cursou arquitetura na Universidade Mackenzie e estudou desenho com Wesley Duke Lee na década de 1960. Em 1966, integrou o Grupo Rex e, em 1970, fundou a Escola Brasil: com Luiz Paulo Baravelli, Frederico Nasser e José Resende. Sua produção compreende desenho, pintura, escultura e instalação, investigando matéria, superfície, espaço e percepção. Foi professor do Departamento de Artes Plásticas da ECA-USP.", "pieces": ["010"]}, {"name": "Ester Grinspum", "bio": "A artista Ester Grinspum nasceu no Recife, em 1955, e vive e trabalha em São Paulo. Estudou na Faculdade de Arquitetura e Urbanismo da Universidade de São Paulo entre 1973 e 1977. Sua obra situa-se entre o desenho e a escultura. Participou da exposição “Como Vai Você, Geração 80?”, no Parque Lage, no Rio de Janeiro, em 1984, e, em 2004, a Pinacoteca de São Paulo apresentou “Ester Grinspum – Uma Antologia”. Tem obras na Pinacoteca, no MAC-USP, no MAM-SP e no Brooklyn Museum.", "pieces": ["011"]}, {"name": "Tomie Ohtake", "bio": "A artista Tomie Ohtake nasceu em Quioto, no Japão, em 1913, e chegou ao Brasil em 1936, fixando-se em São Paulo. Iniciou a carreira artística aos 39 anos e tornou-se uma das principais representantes da abstração no Brasil. Sua produção abrange pintura, gravura e escultura; a partir da década de 1980, realizou obras públicas monumentais em diversas cidades brasileiras. Naturalizou-se brasileira em 1968. Morreu em São Paulo, em 2015.", "pieces": ["012"]}, {"name": "Wesley Duke Lee", "bio": "O artista Wesley Duke Lee nasceu em São Paulo, em 1931. Pioneiro da linguagem pop no Brasil, sua obra marca a passagem da arte moderna para a contemporânea no país. Em 1966, fundou com Nelson Leirner e Geraldo de Barros o Grupo Rex e a Rex Gallery & Sons. No mesmo ano, expôs “Trapézio ou Uma Confissão” na 33ª Bienal de Veneza. Foi professor de artistas como Carlos Fajardo. Morreu em São Paulo, em 2010.", "pieces": ["013"]}], "intro_short": ["A relação estabelecida entre as pessoas e os objetos ultrapassa sua dimensão material e utilitária, envolvendo valores simbólicos, estéticos, afetivos, históricos e culturais. No âmbito do colecionismo, o desejo de adquirir e preservar determinados objetos pode ser motivado por diferentes fatores, como identificação estética, interesse histórico, posicionamentos sociais e culturais ou, simplesmente, pela paixão por determinada manifestação artística. Nesse processo, o objeto adquire novos significados ao ser incorporado a uma coleção, estabelecendo relações entre sua trajetória, a experiência do colecionador e o contexto no qual está inserido."], "intro_more": ["Entre as diferentes vertentes estudadas, o design moderno despertou especial interesse por suas soluções formais, pela síntese entre estética e funcionalidade e pela utilização de linhas predominantemente simples e harmoniosas, associadas às preocupações com ergonomia, materiais e processos construtivos. Esse interesse gradualmente deu origem ao desejo de constituir uma coleção particular de mobiliário e objetos produzidos por designers, arquitetos e artistas brasileiros, assim como por profissionais estrangeiros que se estabeleceram no país e contribuíram significativamente para a construção e consolidação da linguagem moderna no Brasil.", "Minha relação com o colecionismo está vinculada, principalmente, aos aspectos estéticos, funcionais e históricos dos objetos. O interesse pelo mobiliário e por peças de design, especialmente aqueles produzidos entre as décadas de 1960 e 1970, intensificou-se durante minha formação universitária em Design de Interiores. Nesse período, tive contato com diferentes estilos, movimentos artísticos, história da arte e história do design, ao mesmo tempo em que passei a frequentar exposições, galerias e feiras de arte e design. Essas experiências contribuíram para a formação de um olhar mais atento para a cultura material e, particularmente, para a produção vinculada ao modernismo brasileiro.", "O conjunto reúne peças relacionadas a importantes nomes da arte, da arquitetura e do design moderno no Brasil, incluindo profissionais estrangeiros que escolheram o país como espaço de atuação e produção, como Lina Bo Bardi, Lasar Segall, Gregori Warchavchik, e representantes brasileiros, entre eles Paulo Mendes da Rocha e Flávio de Carvalho, com suas peças de mobiliário, além de artistas como Tomie Ohtake, Ester Grinspum, Carlos Fajardo, Wesley Duke Lee, representados pelos tapetes, e o artista John Graz com a sua escultura luminária. A diversidade de trajetórias presente na coleção permite observar diferentes aproximações entre arte, arquitetura, mobiliário e design, assim como compreender a contribuição desses autores para a constituição da cultura material moderna brasileira.", "Sob a perspectiva museológica, a formação de uma coleção não se encerra no processo de aquisição. A preservação e a salvaguarda tornam-se fundamentais para assegurar a permanência material e informacional dos objetos ao longo do tempo. Preservar um acervo implica desenvolver ações articuladas de documentação, pesquisa, conservação preventiva, acondicionamento, manuseio adequado, segurança e monitoramento de seu estado de conservação. A salvaguarda compreende, portanto, não apenas a manutenção da integridade física das peças, mas também a preservação das informações relacionadas à autoria, procedência, materiais, técnicas, contexto de produção, formas de aquisição e trajetória de cada objeto. Quando essas informações são registradas e sistematizadas, o objeto deixa de ser considerado somente por seu valor estético ou econômico e passa a ser reconhecido também como documento e testemunho de determinado contexto histórico e cultural."], "texts": [{"id": "colecionismo", "t": "Colecionismo", "q": "Colecionar não significa apenas reunir bens materiais, mas estabelecer relações entre eles.", "p": ["O colecionismo constitui uma prática cultural presente em diferentes períodos da história, assumindo significados e funções relacionados aos contextos sociais, políticos, econômicos e culturais de cada época. Desde a Antiguidade, a reunião de objetos esteve associada à demonstração de poder, riqueza, prestígio e conhecimento. Durante a Idade Média, a formação de coleções esteve frequentemente vinculada às instituições religiosas, à realeza e à nobreza, que preservavam objetos de valor artístico, simbólico, histórico e religioso. Entretanto, foi durante o Renascimento que essa prática adquiriu novas características, impulsionada pelo humanismo, pelo interesse científico e pela valorização das artes e das antiguidades.", "Nesse período, o ato de colecionar ultrapassou progressivamente a dimensão da posse e da acumulação de objetos raros, belos ou exóticos, incorporando também o desejo de contemplação, estudo, classificação e produção de conhecimento. Surgiu, assim, a necessidade de organizar espaços específicos, geralmente privados, destinados à guarda, à exposição e à apreciação das coleções. O patrocínio da nobreza, da realeza e de famílias economicamente influentes contribuiu significativamente para a disseminação dessas práticas pela Europa, favorecendo o desenvolvimento dos chamados Gabinetes de Curiosidades.", "Os Gabinetes de Curiosidades, que se difundiram especialmente entre os séculos XVI e XVII, reuniam objetos de diferentes procedências e naturezas, como pinturas, esculturas, livros raros, instrumentos científicos, fósseis, minerais, animais preservados, antiguidades e artefatos provenientes de outras culturas. Esses ambientes constituíam espaços de contemplação e investigação, nos quais a diversidade dos objetos expressava o interesse pela compreensão e representação do mundo conhecido. Embora ainda não correspondessem aos museus em sua concepção contemporânea, os gabinetes contribuíram para o desenvolvimento de práticas de classificação, organização e apresentação de coleções, tornando-se importantes antecedentes das instituições museológicas.", "A passagem das coleções privadas para instituições de acesso público ocorreu gradualmente, acompanhando transformações intelectuais, políticas e sociais. Um marco importante foi a inauguração do Ashmolean Museum, em 1683, na Universidade de Oxford, na Inglaterra, considerado um dos primeiros museus públicos e o primeiro museu universitário do mundo. Formado a partir da coleção do antiquário Elias Ashmole, o museu representou uma iniciativa significativa de disponibilização de objetos para estudo, pesquisa e visitação pública. Posteriormente, no século XVIII, os ideais iluministas e as transformações políticas europeias contribuíram para ampliar a compreensão das coleções como instrumentos de educação e conhecimento. Nesse contexto, destaca-se a criação do Museu do Louvre, em Paris, inaugurado em 1793, durante a Revolução Francesa, quando parte das antigas coleções reais passou a integrar uma instituição destinada à fruição pública. Esses acontecimentos marcaram uma importante transformação na história do colecionismo, ao favorecerem a passagem de bens antes associados ao privilégio de determinados grupos para coleções vinculadas à educação, à pesquisa e ao patrimônio cultural.", "A história do colecionismo também pode ser compreendida como a narrativa das diferentes maneiras pelas quais os indivíduos selecionam, classificam e atribuem significados aos objetos. Colecionar não significa apenas reunir bens materiais, mas estabelecer relações entre eles, organizando-os segundo critérios que podem envolver aspectos estéticos, históricos, científicos, afetivos, culturais e econômicos. Nesse processo, o colecionador apropria-se de sistemas de classificação socialmente construídos, ao mesmo tempo que desenvolve critérios próprios, relacionados à sua trajetória, aos seus interesses e à sua percepção do mundo.", "A figura do colecionador, portanto, ultrapassa a dimensão econômica da aquisição e da posse. Suas escolhas podem estar relacionadas à apreciação estética, à identificação cultural, à memória, ao reconhecimento de determinada produção artística ou simplesmente à paixão pelos objetos (Oliveira, 2017). Ao reunir e preservar obras e artefatos, o colecionador também pode contribuir para a valorização de artistas, designers, técnicas e manifestações culturais, favorecendo a preservação de referências importantes para a história da arte e do design. Dependendo das formas de documentação, conservação e compartilhamento adotadas, as coleções particulares podem adquirir relevância que ultrapassa a esfera individual, contribuindo para a pesquisa e para a ampliação do conhecimento sobre determinado contexto histórico e social.", "Segundo Jean Baudrillard, em O sistema dos objetos, os objetos podem assumir significados que ultrapassam sua finalidade prática, especialmente quando passam a integrar uma coleção. Nessa condição, deixam de ser percebidos predominantemente por sua função utilitária e passam a participar de um sistema de relações simbólicas e subjetivas. Uma mesa, uma cadeira ou um tapete, por exemplo, pode deixar de ser compreendido apenas como um objeto de uso cotidiano e adquirir novos significados relacionados à autoria, à memória, à estética, à raridade ou à sua inserção em determinado movimento artístico. Dessa maneira, o objeto de coleção passa a ser valorizado não somente por aquilo que permite realizar, mas também pelo que representa no conjunto ao qual pertence (Baudrillard, 2008).", "Essa transformação evidencia que os objetos não possuem significados fixos ou exclusivamente materiais. Ao serem incorporados a uma coleção, passam a estabelecer novas relações com outros objetos e com a trajetória de quem os reúne. Podem adquirir a condição de documentos culturais, testemunhos históricos ou referências artísticas, dependendo dos processos de pesquisa, interpretação e atribuição de valores aos quais são submetidos. Nesse sentido, a coleção constitui um sistema de relações, no qual cada peça contribui para a construção de uma narrativa mais ampla.", "O ato de colecionar apresenta-se, portanto, como uma expressão particular da interação entre pessoas e objetos. As escolhas realizadas ao longo do tempo podem refletir experiências pessoais, referências culturais, preferências estéticas e transformações nos interesses do colecionador. A coleção, por sua vez, não permanece necessariamente estática, mas pode ser continuamente reinterpretada a partir de novas aquisições, conhecimentos e experiências. Assim, ao mesmo tempo que os objetos são selecionados pelo colecionador, a convivência com eles também contribui para a construção de sua identidade cultural e de sua percepção sobre o campo ao qual pertencem.", "No meu percurso pessoal, o processo de formação da coleção adquiriu maior consistência a partir da experiência profissional em uma galeria dedicada à comercialização de obras de arte contemporânea e mobiliário modernista brasileiro. O contato cotidiano com obras de arte, móveis, artistas, designers, colecionadores e diferentes agentes do mercado de arte possibilitou ampliar meus conhecimentos sobre esse universo, aprofundando o interesse pela produção artística e pelo design brasileiro. Essa experiência também proporcionou maior familiaridade com peças de diferentes períodos, materiais, técnicas e autorias, contribuindo para o desenvolvimento gradual de critérios de apreciação e seleção.", "Inicialmente, o mobiliário, especialmente as cadeiras, era percebido predominantemente em sua condição de mercadoria, considerando sua função utilitária, seu valor comercial e sua inserção no mercado de arte e design. Naquele momento, não havia uma intenção previamente estabelecida de constituir um acervo particular. Entretanto, com o decorrer do tempo, a aproximação profissional, intelectual e afetiva com esses objetos transformou a maneira de compreendê-los. O interesse passou a ultrapassar suas características funcionais e comerciais, incorporando questões relacionadas à autoria, à linguagem estética, aos materiais, às técnicas construtivas e ao contexto histórico de sua produção.", "Essa mudança de percepção contribuiu para o desenvolvimento de critérios pessoais de seleção e para a constituição gradual da coleção. As aquisições passaram a estabelecer relações entre si, deixando de representar escolhas isoladas e adquirindo significado dentro de um conjunto. Nesse processo, o objeto inicialmente percebido como mercadoria passou a ser reconhecido como objeto de coleção, dotado de valores simbólicos, históricos, estéticos e afetivos. A reflexão proposta por Baudrillard permite compreender essa transformação, na medida em que o mobiliário deixa de ser valorizado exclusivamente por sua funcionalidade e passa a integrar um sistema particular de significados.", "O ato de colecionar, entretanto, não consiste simplesmente em acumular objetos. A formação de uma coleção pressupõe escolhas, critérios, relações e uma determinada intenção, ainda que esta se desenvolva progressivamente. Cada aquisição passa a dialogar com as anteriores, contribuindo para construir uma narrativa sobre os interesses do colecionador e sobre determinado campo da produção cultural. Dessa maneira, a coleção adquire coerência a partir das relações estabelecidas entre seus componentes, permitindo identificar aproximações estéticas, históricas e conceituais.", "Ao reunir mobiliário e objetos relacionados, em sua maioria, ao modernismo brasileiro, a coleção particular também permite reconhecer aspectos importantes da história do design no país. As peças constituem referências materiais das transformações estéticas, técnicas e culturais ocorridas ao longo do século XX, especialmente no que se refere à experimentação de materiais, às soluções construtivas, às relações entre arte, arquitetura e design e à valorização de novas linguagens formais. Assim, cadeiras, mesas, tapetes e outros objetos podem ser compreendidos não apenas como elementos funcionais ou decorativos, mas também como manifestações de um contexto histórico e cultural específico."]}, {"id": "modernismo", "t": "O modernismo e o design brasileiro", "q": "O mobiliário moderno brasileiro desenvolveu características específicas, articulando funcionalidade, experimentação formal, expressividade estética e valorização de recursos como a madeira (…)", "p": ["O século XX foi marcado por profundas transformações no campo das artes visuais, da arquitetura e do design, impulsionadas pelas mudanças sociais, culturais e tecnológicas decorrentes da industrialização e da expansão dos centros urbanos. As vanguardas artísticas europeias questionaram os modelos tradicionais de representação e estimularam a experimentação de novas linguagens, materiais e técnicas construtivas. Nesse contexto, a relação entre forma e função adquiriu especial importância, contribuindo para o desenvolvimento de uma concepção moderna do objeto, na qual as qualidades estéticas passaram a dialogar diretamente com suas possibilidades de uso, produção e inserção na vida cotidiana.", "No Brasil, a assimilação dos princípios modernistas ocorreu de maneira particular, em diálogo com as transformações culturais e econômicas do país. A influência das vanguardas europeias foi acompanhada pela busca de uma linguagem própria, capaz de incorporar materiais, técnicas artesanais, referências culturais e condições de produção locais. Dessa maneira, o mobiliário moderno brasileiro desenvolveu características específicas, articulando funcionalidade, experimentação formal, expressividade estética e valorização de recursos como a madeira e outros materiais disponíveis no território nacional. A institucionalização do ensino do design brasileiro com a criação do Instituto de Arte Contemporânea (IAC), vinculado ao Museu de Arte de São Paulo Assis Chateaubriand (MASP), em 1951, foi de grande importância. Idealizado por Pietro Maria Bardi, com participação fundamental de Lina Bo Bardi, o Instituto é reconhecido como uma experiência pioneira e a primeira escola de design do Brasil (Leon, 2014). Suas atividades, desenvolvidas até 1953, foram influenciadas pelas propostas pedagógicas, que integravam arte, artesanato, arquitetura e produção industrial, valorizando a experimentação com materiais e a aproximação entre criação estética e processos produtivos, inspiradas pela Bauhaus, escola fundada por Walter Gropius em 1919, na Alemanha, que desempenhou papel fundamental na renovação do ensino artístico e na consolidação dos princípios do design moderno e que influenciou a arquitetura, o mobiliário, a comunicação visual e o ensino do design em diferentes países. A arquiteta e designer Lina Bo Bardi criou, em São Paulo, o Studio de Arte Palma – primeiro propositor das formas racionais no mobiliário brasileiro de desenho original."]}, {"id": "documentacao", "t": "Documentação e cuidado", "q": "A formação de uma coleção não se encerra no processo de aquisição.", "p": ["A formação de uma coleção particular constitui um processo que ultrapassa o simples ato de adquirir e acumular objetos. Ao selecionar, reunir e organizar peças segundo determinados critérios estéticos, históricos, culturais e afetivos, o colecionador estabelece relações entre os objetos e constrói uma narrativa que reflete seus interesses, experiências e conhecimentos. Entretanto, quando essa coleção passa a ser objeto de pesquisa, documentação, preservação e compartilhamento, amplia-se sua dimensão individual, possibilitando o reconhecimento de seu valor como referência para a memória e o patrimônio cultural.", "Sob a perspectiva museológica, essa formação está relacionada ao processo de musealização, por meio do qual determinados objetos são selecionados, pesquisados, documentados, preservados e comunicados em razão dos valores culturais que lhes são atribuídos (Desvallées; Mairesse, 2013). É importante destacar que o reconhecimento do potencial patrimonial de uma coleção particular não implica, necessariamente, sua incorporação a uma instituição museológica. Entretanto, a adoção de procedimentos fundamentados na Museologia pode contribuir para ampliar sua relevância documental, científica e cultural, criando condições para sua preservação e futura disponibilização à sociedade.", "A documentação museológica constitui uma etapa fundamental para a organização e a valorização do acervo (Padilha, 2014). Apesar de o acervo ser bem reduzido, a elaboração do inventário por meio de fichas de catalogação é de fundamental importância, o que tornou possível reunir informações sobre identificação, autoria, datação, materiais, técnicas de fabricação, dimensões, procedência, histórico de aquisição, estado de conservação, histórico de participação em exposições e registros fotográficos de cada objeto. Essas informações permitem reconhecer as particularidades das peças, estabelecer relações entre elas e ampliar as possibilidades de pesquisa sobre sua trajetória e seu significado cultural, bem como distinguir peças originais, produções de época e reedições autorizadas.", "Além disso, a conservação preventiva é um fator essencial para a continuidade e a integridade da coleção, uma vez que a maior parte da coleção é formada por objetos de mobiliário compostos por materiais diversos, como madeira, metal, couro, fibras naturais, tecidos, vidro e componentes sintéticos, cada um sujeito a processos específicos de deterioração. Vale ressaltar os tapetes, que são compostos por fibras naturais, como a lã, que exigem um maior cuidado e atenção, sendo mais vulneráveis ao risco de deterioração. Dessa maneira, torna-se necessário estabelecer procedimentos adequados de acondicionamento, higienização, manuseio e monitoramento das condições ambientais, considerando fatores como temperatura, umidade relativa, iluminação, incidência de radiação ultravioleta e presença de agentes biológicos. Para se preservar uma coleção, independentemente do seu tamanho e do local onde se encontra, em um espaço público ou privado, todos esses cuidados que foram listados garantem a sua continuidade, a sua existência.", "Outro aspecto que merece destaque é a comunicação, ou o compartilhamento dessa coleção particular. Embora sua formação esteja vinculada a uma trajetória pessoal, o conjunto de objetos pode adquirir interesse coletivo, sendo disponibilizado, por meio de empréstimo, para eventuais exposições, atividades acadêmicas em centros universitários, mostras de design, entre outras possibilidades. Ao relacionar o mobiliário à trajetória de seus criadores e aos movimentos artísticos, a exposição e o compartilhamento desse acervo podem contribuir para a produção de conhecimento no campo do design brasileiro, como também para a compreensão de determinados processos artísticos, históricos e culturais. Também contribuem para a valorização de acervos que, embora constituídos na esfera privada, podem oferecer informações relevantes para a história da arte, da arquitetura e do design brasileiro."]}], "persp": {"p": ["A pesquisa sobre o acervo representou uma importante transformação na maneira como compreendo minha coleção particular de mobiliário, tapetes e objetos. Durante muitos anos, essas peças estiveram integradas ao ambiente doméstico, fazendo parte do cotidiano e sendo apreciadas principalmente por suas qualidades estéticas e funcionais. Embora já existisse um interesse pelo design e pela história dos objetos, devido ao meu percurso acadêmico e profissional, foi a partir dos conhecimentos adquiridos no curso de Museologia e do desenvolvimento deste estudo que passei a reconhecer, de maneira mais aprofundada, sua relevância histórica, artística e cultural.", "Nesse sentido, o curso de Museologia transformou o meu olhar sobre a coleção, permitindo compreender que os objetos ultrapassam sua condição utilitária ou decorativa e podem ser reconhecidos como documentos materiais de determinados períodos e contextos culturais. O estudo das práticas museológicas jogou luz sobre a importância da pesquisa, da documentação, da conservação preventiva, da salvaguarda e da comunicação como instrumentos fundamentais para a preservação e a valorização do acervo. Também se tornou evidente que o ato de colecionar envolve responsabilidades que ultrapassam a simples aquisição dos objetos: a preservação e a salvaguarda são partes integrantes desse processo."], "q": "Assim, este estudo não representa o encerramento de uma pesquisa, mas o início de um processo contínuo de conhecimento, preservação e compartilhamento. O desafio que se apresenta é transformar uma coleção construída a partir de experiências e interesses pessoais em um acervo documentado, preservado e socialmente acessível, capaz de contribuir para a valorização da memória e da história do design brasileiro."}, "refs": ["BAUDRILLARD, J. <b>O sistema dos objetos<\/b>. Tradução de Zulmira Ribeiro Tavares. São Paulo: Perspectiva, 2008.", "DESVALLÉES, A.; MAIRESSE, F. (ed.). <b>Conceitos-chave de museologia<\/b>. Tradução e comentários de Bruno Brulon Soares e Marília Xavier Cury. São Paulo: Comitê Brasileiro do Conselho Internacional de Museus, 2013.", "LEON, E. <b>IAC<\/b>: primeira escola de design do Brasil. São Paulo: Blucher, 2014.", "NUCLEON 8. <b>Coleção os modernos brasileiros<\/b>. São Paulo: Nucleon 8, 1986.", "OLIVEIRA, C. Coleções e colecionadores: as práticas de colecionar, motivações e simbologia. <b>Museologia & Interdisciplinaridade<\/b>, Brasília, v. 6, n. 12, 2017.", "PADILHA, F. C. <b>Documentação museológica e gestão de acervo<\/b>. Florianópolis: FCC, 2014. (Coleção Estudos Museológicos, v. 2)."]};
+const $=s=>document.querySelector(s), E=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+const P=D.pieces, byN=Object.fromEntries(P.map(p=>[p.n,p]));
+const firstImg=p=>'img/'+p.imgs[0].f;
+const ttl=p=>`${p.obj} ${p.title==='Sem título'?'':p.title}`.trim();
+/* intro */
+$('#introShort').innerHTML=D.intro_short.map(p=>`<p>${p}</p>`).join('');
+$('#introMore>div').innerHTML=D.intro_more.map(p=>`<p>${p}</p>`).join('');
+/* timeline */
+const EV=[
+ ['1919','Walter Gropius funda a Bauhaus, na Alemanha, escola que influenciou a arquitetura, o mobiliário e o ensino do design em diferentes países.'],
+ ['1928','Gregori Warchavchik cria a cadeira e os porta-partituras; estes, para a Casa Modernista da Rua Santa Cruz, em São Paulo.',['008','009']],
+ ['1932','Lasar Segall projeta móveis para sua residência na Vila Mariana, hoje Museu Lasar Segall.',['001']],
+ ['1947','Lina Bo Bardi cria a poltrona MOD. 400.',['004']],
+ ['1951','Criação do Instituto de Arte Contemporânea (IAC), vinculado ao MASP, reconhecido como a primeira escola de design do Brasil.'],
+ ['Década de 1950','John Graz cria o sofá e a escultura/luminária; Flávio de Carvalho, a cadeira MOD. 501.',['002','003','005']],
+ ['1957','Paulo Mendes da Rocha cria a cadeira Paulistano.',['006']],
+ ['Década de 1980','A Nucleon 8 executa, em São Paulo, as reedições das peças de mobiliário da coleção.'],
+ ['1985','Paulo Mendes da Rocha cria a espreguiçadeira MOD. 702.',['007']],
+ ['1986','A Nucleon 8 publica o catálogo Coleção os modernos brasileiros.'],
+ ['1989','A Companhia dos Tapetes Ocidentais produz tapetes de tiragem limitada desenhados por Carlos Fajardo, Ester Grinspum, Tomie Ohtake e Wesley Duke Lee.',['010','011','012','013']],
+];
+EV.forEach(([y,d,ps])=>{const e=E('div','ev'+(ps?' p':''),`<div class="dot"></div><div class="yr">${y}</div><div class="d">${d}</div>`);
+ if(ps){const t=E('div','th');ps.forEach(n=>{const b=E('button','',`<img src="${firstImg(byN[n])}" alt="${byN[n].artist}, ${ttl(byN[n])}" loading="lazy">`);b.onclick=()=>{if(!moved)openV(n)};t.append(b)});e.append(t)}
+ $('#track').append(e)});
+const tl=$('#tl');let down=false,sx=0,sl=0,moved=false;
+tl.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=tl.scrollLeft;tl.classList.add('drag')});
+addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-sx;if(Math.abs(dx)>5)moved=true;tl.scrollLeft=sl-dx});
+addEventListener('pointerup',()=>{down=false;tl.classList.remove('drag');setTimeout(()=>moved=false,0)});
+$('#tlL').onclick=()=>tl.scrollBy({left:-520,behavior:'smooth'});$('#tlR').onclick=()=>tl.scrollBy({left:520,behavior:'smooth'});
+/* grid */
+P.forEach(p=>{const c=E('button','card rv',`<div class="im"><img src="${firstImg(p)}" alt="${p.artist}, ${ttl(p)}" loading="lazy"><div class="ov">${p.mat}<br>${p.dim}</div></div><div class="lb"><div class="a">${p.artist}</div><div class="o">${ttl(p)}, ${p.year}</div></div>`);c.dataset.c=p.cat;c.onclick=()=>openV(p.n);$('#grid').append(c)});
+$('#chips').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#chips button').forEach(x=>x.classList.toggle('on',x===b));
+ document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.c!==b.dataset.f))};
+/* viewer */
+let cur=0,ph=0,mode='col';const vw=$('#vw');
+function shots(){const p=P[cur];return mode==='orig'&&p.orig?[{f:p.orig.f,c:p.orig.c+' — Fonte: Nucleon 8 (1986)'}]:p.imgs.map(i=>({f:i.f,c:i.c+' — Foto: Verônica De Farias'}))}
+function drawImg(){const s=shots(),im=$('#vImg');ph=(ph+s.length)%s.length;im.style.opacity=0;
+ setTimeout(()=>{im.src='img/'+s[ph].f;im.alt=P[cur].artist+', '+ttl(P[cur])+' — '+s[ph].c;$('#vCap').textContent=s[ph].c;im.onload=()=>im.style.opacity=1},150);
+ $('#vDots').innerHTML=s.length>1?s.map((_,i)=>`<i class="${i===ph?'on':''}"></i>`).join(''):'';
+ $('#vPrev').hidden=$('#vNext').hidden=s.length<2}
+function fill(){const p=P[cur];$('#vNum').textContent=`Obra ${p.n} / 013`;$('#vA').textContent=p.artist;
+ $('#vMeta').innerHTML=`<div class="t">${ttl(p)}, ${p.year}</div><div>${p.ed}${p.cat==='tapetes'?', 1989':''}</div><div>${p.mat}</div><div>${p.dim}</div>`;
+ $('#vDs').textContent=p.desc;$('#vTog').style.display=p.orig?'':'none';mode='col';ph=0;
+ document.querySelectorAll('#vTog button').forEach(b=>b.classList.toggle('on',b.dataset.v==='col'));drawImg()}
+function openV(n){cur=P.findIndex(p=>p.n===n);fill();vw.classList.add('open');document.body.style.overflow='hidden';$('#vX').focus()}
+function closeV(){vw.classList.remove('open');document.body.style.overflow=''}
+$('#vX').onclick=closeV;$('#vPrev').onclick=()=>{ph--;drawImg()};$('#vNext').onclick=()=>{ph++;drawImg()};
+$('#pPrev').onclick=()=>{cur=(cur+P.length-1)%P.length;fill()};$('#pNext').onclick=()=>{cur=(cur+1)%P.length;fill()};
+$('#vTog').onclick=e=>{const b=e.target.closest('button');if(!b)return;mode=b.dataset.v;ph=0;document.querySelectorAll('#vTog button').forEach(x=>x.classList.toggle('on',x===b));drawImg()};
+addEventListener('keydown',e=>{if(!vw.classList.contains('open'))return;if(e.key==='Escape')closeV();if(e.key==='ArrowRight')$('#pNext').click();if(e.key==='ArrowLeft')$('#pPrev').click()});
+let tx=0;$('#stage').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+$('#stage').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50){ph+=dx<0?1:-1;drawImg()}});
+/* artists */
+D.artists.forEach(a=>{const w=E('div','art rv');const p0=byN[a.pieces[0]];
+ w.innerHTML=`<button aria-expanded="false"><span class="tn"><img src="${firstImg(p0)}" alt="" loading="lazy"></span><span class="nm">${a.name}<span class="ct">${a.pieces.length} ${a.pieces.length>1?'obras':'obra'}</span></span><span class="pl">+</span></button>
+ <div class="more"><div><div class="bd"><p>${a.bio}</p><div class="lk">${a.pieces.map(n=>`<button data-n="${n}"><img src="${firstImg(byN[n])}" alt="" loading="lazy"><span>Ver obra ${n}</span></button>`).join('')}</div></div></div></div>`;
+ const b=w.querySelector('button');b.onclick=()=>{const o=w.classList.toggle('open');w.querySelector('.more').classList.toggle('open',o);b.setAttribute('aria-expanded',o)};
+ w.querySelectorAll('.lk button').forEach(x=>x.onclick=()=>openV(x.dataset.n));$('#arts').append(w)});
+/* texts */
+D.texts.forEach((t,i)=>{const b=E('button',i?'':'on',t.t);b.setAttribute('role','tab');b.onclick=()=>{document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));document.querySelectorAll('.pane').forEach((p,j)=>p.classList.toggle('on',j===i))};$('#tabs').append(b);
+ const p=E('div','pane'+(i?'':' on'),`<p class="q">${t.q}</p><div class="more" id="m${i}"><div>${t.p.map(x=>`<p>${x}</p>`).join('')}</div></div><button class="btn up" data-more="m${i}" aria-expanded="false">Ler texto completo <span class="pl">+</span></button>`);$('#panes').append(p)});
+$('#perspQ').textContent=D.persp.q;$('#perspMore>div').innerHTML=D.persp.p.map(x=>`<p>${x}</p>`).join('');
+document.addEventListener('click',e=>{const b=e.target.closest('[data-more]');if(!b)return;const m=document.getElementById(b.dataset.more),o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.firstChild.textContent=o?'Fechar ':(b.dataset.more.startsWith('m')?'Ler texto completo ':'Ler mais ')});
+$('#refs').innerHTML=D.refs.map(r=>`<li>${r}</li>`).join('');
+/* header + nav */
+const hd=$('#hd');const onS=()=>hd.classList.toggle('solid',scrollY>innerHeight-70);addEventListener('scroll',onS,{passive:true});onS();
+$('#burger').onclick=()=>{const o=$('#nav').classList.toggle('open');$('#burger').setAttribute('aria-expanded',o);hd.classList.add('solid')};
+$('#nav').onclick=()=>$('#nav').classList.remove('open');
+const links=[...document.querySelectorAll('nav a')];
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.hash==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+['exposicao','linha','obras','artistas','colecao'].forEach(id=>io2.observe(document.getElementById(id)));
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
